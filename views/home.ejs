@@ -1,0 +1,12 @@
+<%- include("partials/header")%>
+
+<h1>Home</h1>
+<p><%=homeContent%></p>
+
+
+<% for(var i=0;i<postShared.length;i++){ %>
+    <h1> <%= postShared[i].title%> </h1>
+    <p><%= postShared[i].body.substring(0, 100) + "..." %><a href="/posts/<%= postShared[i].title%>">Read More</a></p>
+<%} %>
+
+<%- include("partials/footer")%>
